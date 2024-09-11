@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cal.css">
+</head>
+
+<body>
+    <div class="box">
+        <input type="text" id="input" value="0">
+        <div class="row1">
+            <button value="1" id="a1">1</button>
+            <button value="2" id="a2">2</button>
+            <button value="3" id="a3">3</button>
+            <button value="+" id="aplus" class="operate">+</button>
+        </div>
+        <div class="row2">
+            <button value="4" id="a4">4</button>
+            <button value="5" id="a5">5</button>
+            <button value="6" id="a6">6</button>
+            <button value="-" id="asub" class="operate">-</button>
+        </div>
+        <div class="row3">
+            <button value="7" id="a7">7</button>
+            <button value="8" id="a8">8</button>
+            <button value="9" id="a9">9</button>
+            <button value="/" id="adiv" class="operate">/</button>
+        </div>
+        <div class="row4">
+            <button value="C" id="aC" class="clr">C</button>
+            <button value="0" id="a0">0</button>
+            <button id="aequal" class="operate eq">=</button>
+            <button value="*" id="ainto" class="operate">*</button>
+        </div>
+    </div>
+    <script>
+        let input = document.querySelector('#input');
+let one = document.querySelector('#a1');
+let two = document.querySelector('#a2');
+let three = document.querySelector('#a3');
+let four = document.querySelector('#a4');
+let five = document.querySelector('#a5');
+let six = document.querySelector('#a6');
+let seven = document.querySelector('#a7');
+let eight = document.querySelector('#a8');
+let nine = document.querySelector('#a9');
+let zero = document.querySelector('#a0');
+let plus = document.querySelector('#aplus');
+let sub = document.querySelector('#asub');
+let into = document.querySelector('#ainto');
+let div = document.querySelector('#adiv');
+let equal = document.querySelector('#aequal');
+let C = document.querySelector('#aC');
+
+let operatorPressed = false; // Flag to check if an operator is already pressed
+
+// Function to append numbers and reset operator flag
+function appendNumber(value) {
+    input.value += value;
+    operatorPressed = false; // Reset operator flag when a number is clicked
+}
+
+// Add event listeners for numbers
+one.addEventListener('click', function () { appendNumber(one.value); });
+two.addEventListener('click', function () { appendNumber(two.value); });
+three.addEventListener('click', function () { appendNumber(three.value); });
+four.addEventListener('click', function () { appendNumber(four.value); });
+five.addEventListener('click', function () { appendNumber(five.value); });
+six.addEventListener('click', function () { appendNumber(six.value); });
+seven.addEventListener('click', function () { appendNumber(seven.value); });
+eight.addEventListener('click', function () { appendNumber(eight.value); });
+nine.addEventListener('click', function () { appendNumber(nine.value); });
+zero.addEventListener('click', function () { appendNumber(zero.value); });
+
+// Function to append operator only if no operator is pressed
+function appendOperator(value) {
+    if (!operatorPressed) {  // If no operator is pressed
+        input.value += value;
+        operatorPressed = true; // Set the flag to true
+    }
+}
+
+// Add event listeners for operators
+plus.addEventListener('click', function () { appendOperator(plus.value); });
+sub.addEventListener('click', function () { appendOperator(sub.value); });
+div.addEventListener('click', function () { appendOperator(div.value); });
+into.addEventListener('click', function () { appendOperator(into.value); });
+
+// Evaluate expression on "=" button click
+equal.addEventListener('click', function () {
+    try {
+        input.value = eval(input.value);
+    } catch (e) {
+        input.value = "Error"; // Handle invalid expressions
+    }
+    operatorPressed = false; // Reset flag after evaluation
+});
+
+// Clear input and reset operator flag
+C.addEventListener('click', function () {
+    input.value = "";
+    operatorPressed = false; // Reset flag when cleared
+});
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 300px;
+            width: 300px;
+            position: absolute;
+        }
+
+        .box {
+            height: 800px;
+            width: 800px;
+            background-color: bisque;
+            position: relative;
+        }
+
+        .div1 {
+            background-color: black;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .div2 {
+            background-color: blue;
+            top: 50px;
+            left: 50px;
+            z-index: 2;
+        }
+
+        .div3 {
+            background-color: brown;
+            top: 100px;
+            left: 100px;
+            z-index: 2;
+        }
+
+        .div4 {
+            background-color: chartreuse;
+            top: 150px;
+            left: 150px;
+            z-index: 2;
+        }
+
+        .one {
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="div1 container">a</div>
+        <div class="div2 container">b</div>
+        <div class="div3 container">c</div>
+        <div class="div4 container">d</div>
+    </div>
+    <script>
+        let contain = document.getElementsByClassName("container");
+        contain[0].addEventListener("click", () => {
+            if (contain[0].className != "one") {
+                contain[0].className = "one";
+            }
+
+        })
+        contain[1].addEventListener("click", () => {
+            if (contain[1].className != "one") {
+                contain[1].className = "one";
+            }
+        })
+        contain[2].addEventListener("click", () => {
+            if (contain[2].className != "one") {
+                contain[2].className = "one";
+            }
+        })
+        contain[3].addEventListener("click", () => {
+            if (contain[3].className != "one") {
+                contain[3].className = "one";
+            }
+        })
+    </script>
+</body>
+
+</html>

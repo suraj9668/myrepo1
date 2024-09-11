@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .suraj{
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <a href=""></a>
+    <h1><link  href=""> Home to go Social Media</h1>
+    click here to open the website
+    <h1 id="tt" onclick="g()">Google </h1>
+    <h1 onclick="f()">Facebook</h1>
+    <h1 onclick="m()">Map</h1>
+    <script>
+ 
+        function g(){
+           let p = document.querySelector("#tt");
+           p.style.color='red';
+           p.className='suraj';
+             
+        } 
+        function f(){
+            window.open("http://www.facebook.com","_parent");
+        }
+        function m(){
+            window.open("http://www.map.com","_parent");
+        }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #one{
+            height: 900px;
+            width: 1200px;
+            background-color: cadetblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .change{
+            height: 40px;
+            width:120px;
+            background-color: rgb(75, 78, 79);
+            border-radius: 20px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="one">
+
+    </div>
+    <script>
+        let one = document.getElementById("one");
+        let newEle = document.createElement("button");
+        one.appendChild(newEle);
+        newEle.className="change";
+        newEle.innerHTML="change";
+        newEle.style.color="white";
+        newEle.style.fontSize="16px";
+
+    </script>
+</body>
+</html>

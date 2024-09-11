@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            height: 500px;
+            width: 500px;
+            background-color: rgb(255, 255, 255);
+
+        }
+
+        .one,
+        .two,
+        .three {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tab {
+            height: 100px;
+            width: 100px;
+            background-color: black;
+            color: aliceblue;
+            font-size: 40px;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tab:hover {
+            border-radius: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="one">
+            <div class="tab" id="tab1" onclick="bari(1)"></div>
+            <div class="tab" id="tab2" onclick="bari(2)"></div>
+            <div class="tab" id="tab3" onclick="bari(3)"> </div>
+        </div>
+        <div class="two">
+            <div class="tab" id="tab4" onclick="bari(4)"> </div>
+            <div class="tab" id="tab5" onclick="bari(5)"> </div>
+            <div class="tab" id="tab6" onclick="bari(6)"> </div>
+        </div>
+        <div class="three">
+            <div class="tab" id="tab7" onclick="bari(7)"> </div>
+            <div class="tab" id="tab8" onclick="bari(8)"> </div>
+            <div class="tab" id="tab9" onclick="bari(9)"> </div>
+        </div>
+    </div>
+    <script>
+        let one=0; 
+        let flag = false;
+        let a = document.getElementById("tab1").addEventListener('click', () => {
+            if (one == 0) {
+                if (flag == true) {
+                    document.getElementById("tab1").innerText = "X";
+                    flag = false;
+                } else {
+                    document.getElementById("tab1").innerText = "O";
+                    flag = true;
+                }
+                one=1;
+            }
+
+        })
+        let b = document.getElementById("tab2").addEventListener('click', () => {
+            if (one == 1) {
+                if (flag == true) {
+                    document.getElementById("tab2").innerText = "X";
+                    flag = false;
+                } else {
+                    document.getElementById("tab2").innerText = "O";
+                    flag = true;
+                }
+                one=0;
+            }
+        })
+        let c = document.getElementById("tab3").addEventListener('click', () => {
+            if (one == 0) {
+                if (flag == true) {
+                    document.getElementById("tab3").innerText = "X";
+                    flag = false;
+                } else {
+                    document.getElementById("tab3").innerText = "O";
+                    flag = true;
+                }
+                one=1;
+            }
+        })
+        let d = document.getElementById("tab4").addEventListener('click', () => {
+            if (one == 1) {
+                if (flag == true) {
+                    document.getElementById("tab4").innerText = "X";
+                    flag = false;
+                } else {
+                    document.getElementById("tab4").innerText = "O";
+                    flag = true;
+                }
+                one=0;
+            }
+        })
+        let e = document.getElementById("tab5").addEventListener('click', () => {
+            if (one == 0) {
+                if (flag == true) {
+                    document.getElementById("tab5").innerText = "X";
+                    flag = false;
+                } else {
+                    document.getElementById("tab5").innerText = "O";
+                    flag = true;
+                }
+                one=1;
+            }
+        })
+        let f = document.getElementById("tab6").addEventListener('click', () => {
+            if (one == 1) {
+                if (flag == true) {
+                    document.getElementById("tab6").innerText = "X";
+                    flag = false;
+                } else {
+                    document.getElementById("tab6").innerText = "O";
+                    flag = true;
+                }
+                one=0;
+            }
+        })
+        let g = document.getElementById("tab7").addEventListener('click', () => {
+            if (one == 0) {
+                if (flag == true) {
+                    document.getElementById("tab7").innerText = "X";
+                    flag = false;
+                } else {
+                    document.getElementById("tab7").innerText = "O";
+                    flag = true;
+                }
+                one=1;
+            }
+        })
+        let h = document.getElementById("tab8").addEventListener('click', () => {
+            if (one == 1) {
+                if (flag == true) {
+                    document.getElementById("tab8").innerText = "X";
+                    flag = false;
+                } else {
+                    document.getElementById("tab8").innerText = "O";
+                    flag = true;
+                }
+                one=0;
+            }
+        })
+        let i = document.getElementById("tab9").addEventListener('click', () => {
+            if (one == 0) {
+                if (flag == true) {
+                    document.getElementById("tab9").innerText = "X";
+                    flag = false;
+                } else {
+                    document.getElementById("tab9").innerText = "O";
+                    flag = true;
+                }
+                one=1;
+            }
+        })
+    </script>
+</body>
+
+</html>

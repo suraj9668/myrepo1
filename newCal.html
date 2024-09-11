@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cal.css">
+</head>
+
+<body>
+    <div class="box">
+        <input type="text" id="input" value="0">
+        <div class="row1">
+            <button value="1" id="a1" onclick="addInp(1)">1</button>
+            <button value="2" id="a2" onclick="addInp(2)">2</button>
+            <button value="3" id="a3" onclick="addInp(3)">3</button>
+            <button value="+" id="aplus" class="operate" onclick="operate('+')">+</button>
+        </div>
+        <div class="row2">
+            <button value="4" id="a4" onclick="addInp(4)">4</button>
+            <button value="5" id="a5" onclick="addInp(5)">5</button>
+            <button value="6" id="a6" onclick="addInp(6)">6</button>
+            <button value="-" id="asub" class="operate" onclick="operate('-')">-</button>
+        </div>
+        <div class="row3">
+            <button value="7" id="a7" onclick="addInp(7)">7</button>
+            <button value="8" id="a8" onclick="addInp(8)">8</button>
+            <button value="9" id="a9" onclick="addInp(9)">9</button>
+            <button value="/" id="adiv" class="operate" onclick="operate('/')">/</button>
+        </div>
+        <div class="row4">
+            <button value="C" id="aC" class="clr" onclick="clears()">C</button>
+            <button value="0" id="a0" onclick="addInp(0)">0</button>
+            <button id="aequal" class="operate eq" onclick="evall()">=</button>
+            <button value="*" id="ainto" class="operate" onclick="operate('*')">*</button>
+        </div>
+    </div>
+    <script>
+        let clickS = new Audio('click-21156.mp3');
+        let chack = false;
+        function addInp(val) {
+            clickS.play();
+            let input = document.getElementById("input");
+            if (input.value === "0") input.value = "";  // Prevent appending to the default "0"
+            input.value += val;
+            chack = false;
+        }
+        function operate(sym) {
+            clickS.play();
+            let input = document.getElementById("input");
+            if (chack != true) {
+                input.value += sym;
+                chack = true;
+            }
+        }
+        function evall() {
+            clickS.play();
+            let input = document.getElementById("input");
+            input.value = eval(input.value);
+            chack = false;
+        }
+        function clears() {bbbbbbbbbb
+            clickS.play();
+            let input = document.getElementById("input");
+            input.value = "0";
+            chack = false;
+        }
+    </script>
+</body>
+
+</html>

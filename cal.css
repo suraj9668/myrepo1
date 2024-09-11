@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("");
+    position: relative;
+    /* background-image: linear-gradient(to right bottom ,rgb(222, 253, 220), white ,rgb(216, 216, 255)); */
+}
+.box{
+    width: 500px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right bottom ,rgb(222, 253, 220), white ,rgb(216, 216, 255));
+}
+.operate{
+    color: rgb(255, 172, 27);
+    font-size: 30px;
+}
+.eq{
+    background-color: rgb(255, 172, 27);
+    color: rgb(255, 255, 255);
+}
+.clr{
+    background-color: brown;
+    color: rgb(255, 255, 255);
+}
+button{
+    width: 70px;
+    height: 70px;
+    margin: 4px;
+    border-radius: 50%;
+    color: white;
+    font-size: 26px;
+    background-color: black;
+    border: none;
+    box-shadow: 1px 1px 10px 0px black;
+    font-weight: 700;
+    cursor: pointer;
+}
+button:hover{
+    color: black;
+    background-color: rgb(255, 255, 255);
+    transition: 1s ;
+}
+#input{
+    height: 60px;
+    width: 300px;
+    margin: 20px;
+    padding-right: 40px;
+    text-align: right;
+    font-size: 26px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border-radius: 10px;
+    border: none;
+}

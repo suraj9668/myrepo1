@@ -1,0 +1,25 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <input type="number" name="" id="f">
+    <input type="number" name="" id="c">
+    <script>
+         let a=25;
+         let b=77;
+
+         function cel_to_fer(cel){
+            return (cel*9/5)+32;
+         }
+         function fer_to_cel(fer){
+            return (fer-32)*5/9;
+         }
+         document.write(` <br> <br>${a} dege is ${cel_to_fer(a)} fehrenheit`);
+         document.write(`  <br> <br> ${b} dege is ${fer_to_cel(b)} fehrenheit`);
+    </script>
+ </body>
+ </html>
